@@ -29,4 +29,10 @@ A sleek and interactive dashboard built using **Streamlit** and **PostgreSQL**, 
 ---
 
 ## 📂 Project Structure
-
+flights_sql_app/
+│
+├── app.py # Streamlit app
+├── db.py # PostgreSQL DB connection logic
+├── crud.py # SQL Queries for all analytics
+├── requirements.txt # Python dependencies
+└── README.md # Project overview
