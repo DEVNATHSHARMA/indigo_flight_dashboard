@@ -1,7 +1,7 @@
 streamlit
 pandas
 numpy
-psycopg2
+plotly
 matplotlib
 seaborn
-plotly
+psycopg2-binary
