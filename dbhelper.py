@@ -1,19 +1,22 @@
+import streamlit as st
 import psycopg2
 
 class DB:
     def __init__(self):
         try:
             self.connection_obj = psycopg2.connect(
-                host='127.0.0.1',
-                user='postgres',
-                password='1234',
-                database='indigo'
+                host=st.secrets["general"]["DB_HOST"],
+                user=st.secrets["general"]["DB_USER"],
+                password=st.secrets["general"]["DB_PASSWORD"],
+                database=st.secrets["general"]["DB_NAME"]
             )
             self.connection_obj.autocommit = True
             self.mycursor = self.connection_obj.cursor()
-        except Exception as e:
-            print("Connection error:", e)
 
+        except Exception as e:
+            st.error(f"Database connection failed: {e}")  # ✅ shows error in Streamlit app
+            self.connection_obj = None
+            self.mycursor = None
     def fetch_city_name(self):
         city=[]
         try:
