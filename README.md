@@ -1,6 +1,7 @@
 # 🛫 Indigo Flight Analytics Dashboard
 
 A sleek and interactive dashboard built using **Streamlit** and **PostgreSQL**, offering real-time analytics and insights into domestic flight operations in India. This project is based on a cleaned dataset of flight information including airline names, routes, stops, durations, and fares.
+🚀 [Live Demo](https://indigoflightdashboard-w5sxulv6jaidecngok2kku.streamlit.app)
 
 ---
 
